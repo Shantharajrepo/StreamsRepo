@@ -11,7 +11,7 @@ public class SumOfIndividualDigits {
         System.out.println(s);
         String[] split = s.split("");
         Stream<String> stream = Arrays.stream(split);
- //       Stream<Integer> integerStream = stream.map(i -> Integer.parseInt(i));
+//        Stream<Integer> integerStream = stream.map(i -> Integer.parseInt(i));
 //        Integer reduce = integerStream.reduce(0, (a, b) -> a + b);
 
         int add = stream.mapToInt(a -> Integer.parseInt(a)).sum();
