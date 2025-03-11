@@ -12,7 +12,7 @@ public class CountOfCharacter {
 
         String[] split = s.split("");
 
-        Stream<String> sequential = Arrays.stream(split).sequential();
+        Stream<String> sequential = Arrays.stream(split);
         Map<String, Long> collect = sequential.
                 collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
         System.out.println(collect);

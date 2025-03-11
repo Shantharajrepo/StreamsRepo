@@ -11,10 +11,10 @@ public class FindDuplicates {
                 .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
 
 
-        for (Map.Entry<String, Long> entries:collect.entrySet()){
-            if(entries.getValue()>1){
+        for (Map.Entry<String, Long> entry:collect.entrySet()){
+            if(entry.getValue()>1){
                 Map<String,Long> stringLongMap=new HashMap<>();
-                stringLongMap.put(entries.getKey(),entries.getValue());
+                stringLongMap.put(entry.getKey(),entry.getValue());
                 System.out.println(stringLongMap);
             }
         }
