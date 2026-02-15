@@ -13,7 +13,7 @@ public class GroupBySalary {
         employees.add(new Employee(3,"deepak",300000L));
         employees.add(new Employee(4,"Kiran",300000L));
         employees.add(new Employee(5,"manoj",800000L));
-        employees.add(new Employee(6,"usha",200000L));
+        employees.add(new Employee(6,"anji",200000L));
 
         Map<Long, List<Employee>> collect = employees.stream()
                 .collect(Collectors.groupingBy(e -> e.getSalary()));
